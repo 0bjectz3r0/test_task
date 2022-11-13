@@ -1,0 +1,42 @@
+<html lang='ru'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel='stylesheet' href='style.css'>
+	<title>Test</title>
+</head>
+<body>
+	<div class='container'>
+		<div  class='topic-text'>Отправьте нам сообщение</div>
+		<p>Если у Вас есть вопросы или предложения по сотрудничеству - заполните форму ниже</p>
+		<form action='send.php' name='form' method='POST'>  <!-- Форма обратной связи -->
+			<div class='input-box'> <!-- ФИО -->
+				<input 
+				  type='text'
+				  placeholder='Ваше ФИО*'
+				  name='name'
+				  id='name'
+				>
+				<span><?php echo $nameError;?></span>
+			</div>
+			<div class='input-box'> <!-- E-mail -->
+				<input
+				  type='mail'
+				  placeholder='Ваш E-mail*'
+				  name='email'
+				  id='email'
+				 >
+			</div>
+			<div class='input-box message-box'> <!-- Сообщение -->
+				<textarea placeholder='Сообщение' name='message'></textarea>
+			</div>
+			<div class='button'> <!-- Кнопка отправки -->
+				<input type='submit' id='button' value='Отправить'>
+			</div>
+		</form>
+	</div>
+	<script src='test.js'>
+	</script>
+</body>
+</html>
